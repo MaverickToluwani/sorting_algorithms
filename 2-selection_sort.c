@@ -7,7 +7,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, swp, idx, key;
+	size_t i, j, swp, key;
 
 	for (i = 0; i < size; i++)
 	{
@@ -25,14 +25,7 @@ void selection_sort(int *array, size_t size)
 			swp = array[i];
 			array[i] = array[key];
 			array[key] = swp;
-			for (idx = 0; idx < size; idx++)
-			{
-				if (idx == size - 1)
-					printf("%d", array[idx]);
-				else
-					printf("%d, ", array[idx]);
-			}
-			printf("\n");
+			print_array(array, size);
 		}
 	}
 }
